@@ -1,0 +1,37 @@
+version=QCC514X_CONFIG
+
+##############################
+file=system3
+
+# The capacitance for driving a crystal providing the raw clock
+XtalLoadCapacitance = 0x0A
+
+# Fine frequency trim for a crystal providing the raw chip clock
+XtalFreqTrim = 0
+
+##############################
+file=bt2
+
+# BD_ADDRESS
+BD_ADDRESS = [ 06 FF 00 5B 02 00 ]
+
+##############################
+file=app3
+
+# License Key for product feature
+FeatureLicenseKey = [ CB 3B 33 D2 35 1E 5C 96 BF 71 D0 86 5C C0 AD CA 8E E8 FD 00 C2 56 A1 B1 DF 99 91 91 C6 B9 55 A7 7E A8 18 F2 43 5E 95 F9 96 2D E5 C8 11 EC 7A E0 34 71 8F 41 61 7B B3 32 F0 CC C9 FE E1 7C 53 67 ]
+
+# Device product string descriptor
+USBProductString = "QCC5141"
+
+# Device serial number string descriptor
+USBSerialNumberString = "ABCDEF0123456789"
+
+# Manufacturer string descriptor
+USBManufString = "Qualcomm"
+
+##############################
+file=app5
+
+# MIB key to set device name
+DeviceName = "FRENZ-X8-06"

@@ -1,0 +1,40 @@
+version=QCC514X_CONFIG
+
+##############################
+file=system3
+
+# The capacitance for driving a crystal providing the raw clock
+XtalLoadCapacitance = 0x0A
+
+# Fine frequency trim for a crystal providing the raw chip clock
+XtalFreqTrim = 0
+
+# Action to take when a panic or subsystem watchdog occurs
+PanicAction = 0x00
+
+##############################
+file=bt2
+
+# BD_ADDRESS
+BD_ADDRESS = [ DB 00 40 1C 3C E0 ]
+
+##############################
+file=app3
+
+# License Key for product feature
+FeatureLicenseKey = [ DF 83 DA 6A ED F2 60 82 3C A5 3F C3 1E C9 87 F9 EE 18 FA 69 69 67 C2 1D BD 3B 33 01 06 E2 0E E6 DC 1B 23 A9 E6 DA 41 83 89 61 AF 93 B4 02 14 37 6E E8 E7 DB 2F 37 36 42 5D 1F 28 E9 8B 6C 98 46 ]
+
+# Device product string descriptor
+USBProductString = "QCC5141"
+
+# Device serial number string descriptor
+USBSerialNumberString = "ABCDEF0123456789"
+
+# Manufacturer string descriptor
+USBManufString = "Qualcomm"
+
+##############################
+file=app5
+
+# MIB key to set device name
+DeviceName = "AUDIO_FRENZ020"
