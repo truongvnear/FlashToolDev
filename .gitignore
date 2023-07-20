@@ -1,5 +1,7 @@
 __pycache__
 .vscode
 /build
+/Release
 log/*
 !log
+*.spec
