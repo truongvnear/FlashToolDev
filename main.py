@@ -227,11 +227,20 @@ class ManufactureTool(object):
         if not self.mt_fl_burn(fw_path):
             return False
 
+        # Reset device
         is_device_available = False
         print_format("Reset device", STATUS_PROCESSING)
         time.sleep(5)
         print_format("Reset device", STATUS_SUCCESS)
 
+        # Remote Rev. field in file config
+        with fileinput.FileInput(self.cfg_user_ps_apps, inplace=True, backup='.bak') as file:
+            for line in file:
+                if FW_VER_PATTERN in line:
+                    print("")
+                else:
+                    print(line, end="")
+                    
         # Write configuration to device
         ret = self.mt_cfg_write_usr_ps_cfg()
         print("write usr_cfg " + str(ret))
