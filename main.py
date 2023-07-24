@@ -309,6 +309,7 @@ class ManufactureTool(object):
                 if SERIAL_NO_PATTERN in line:
                     self.serial_no = mt_cfg_parse_hex_array_to_str(line)
 
+
     def mt_cfg_bt_prompt(self) -> str:
         # Change BT address (00->FF)
         bt_addr = input("Choose input address (hex value from 00 to FF): ")
@@ -477,7 +478,7 @@ class ManufactureTool(object):
             print("Can load device configurations\nPlease ensure device is on and connected to PC")
             input("Press any key to exit!!!")
             sys.exit(0)
-
+        self.serial_no = ""
         self.mt_cfg_parse_dev_cfg()
         self.mt_cfg_parse_user_ps()
 
