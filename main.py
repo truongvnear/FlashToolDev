@@ -478,7 +478,14 @@ class ManufactureTool(object):
             print("Can load device configurations\nPlease ensure device is on and connected to PC")
             input("Press any key to exit!!!")
             sys.exit(0)
+        
+        # Reset to init value
+        self.bt_addr = ""
+        self.device_name = ""
+        self.fw_ver = ""
         self.serial_no = ""
+
+        # Update value
         self.mt_cfg_parse_dev_cfg()
         self.mt_cfg_parse_user_ps()
 
